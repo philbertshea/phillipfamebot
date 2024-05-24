@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+<body>
+    <h2>FAME Chatbot</h2>
+    <form action="/mybot/hello/" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <!-- <label for="userQuery">Ask me Anything!</label>
+          <input type="text" class="form-control" id="userQuery"  placeholder="Type here..."> -->
+          <br/>
+          {% for field in form %}
+            <div class="control-group">
+                <label class="control-label">{{ field.label }}</label> 
+                <div class="controls">{{ field }}</div>
+            </div>
+          {% endfor %}
+          <br/>
+          <small class="form-text text-muted">By using this chatbot, you agree to our disclaimer.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <br/>
+    <h2>Chatbot's Reply</h2>
+    {{ prev }}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": ["hello", "hey", "hi", "what's up?"],
+            "responses": ["Hello!", "Hey!", "What can I do for you?"]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["goodbye", "bye", "ttyl", "see you", "cya"],
+            "responses": ["Goodbye!"]
+        },
+        {
+            "tag": "introduction",
+            "patterns": ["who are you", "what is your name", "what is fame", "introduce"],
+            "responses": ["hi, I'm the FAME chatbot. Feel free to ask me anything about FAME."]
+        },
+        {
+            "tag": "contact_us",
+            "patterns": ["live agent", "real person", "who should I contact?", "contact details"],
+            "responses": "You may contact us at b2bmktg@phillip.com.sg"
+        }
+    ]
+}
